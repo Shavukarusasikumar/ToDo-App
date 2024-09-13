@@ -1,12 +1,12 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class toDo {
   String title;
-  bool iscompleted = false;
-  DateTime? dueDate;
-  TimeOfDay? dueTime;
-  String? description;
+  bool iscompleted;
+  DateTime dueDate;
+  TimeOfDay dueTime;
+  String description;
+
   toDo({
     required this.title,
     required this.iscompleted,
@@ -14,4 +14,27 @@ class toDo {
     required this.dueTime,
     required this.description,
   });
+
+ 
+  Map<String, dynamic> toJson() => {
+        'title': title,
+        'iscompleted': iscompleted,
+        'dueDate': dueDate.toIso8601String(),
+        'dueTime': '${dueTime.hour}:${dueTime.minute}',
+        'description': description,
+      };
+
+  static toDo fromJson(Map<String, dynamic> json) {
+    final timeParts = json['dueTime'].split(':');
+    return toDo(
+      title: json['title'],
+      iscompleted: json['iscompleted'],
+      dueDate: DateTime.parse(json['dueDate']),
+      dueTime: TimeOfDay(
+        hour: int.parse(timeParts[0]),
+        minute: int.parse(timeParts[1]),
+      ),
+      description: json['description'],
+    );
+  }
 }
