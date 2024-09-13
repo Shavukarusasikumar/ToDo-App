@@ -1,16 +1,18 @@
-# todo
+## Todo App
+A beautiful and responsive Todo application built with Flutter. This app helps you manage your tasks efficiently with a sleek, modern UI and intuitive features.
 
-A new Flutter project.
 
-## Getting Started
+# Features
 
-This project is a starting point for a Flutter application.
+1. Create, edit, and delete tasks
+2. Mark tasks as complete or incomplete
+3. Set due dates and times for tasks
+4. View active and completed tasks separately
+3. Responsive design for both mobile and tablet layouts
+4. Beautiful gradient backgrounds and custom UI elements
 
-A few resources to get you started if this is your first Flutter project:
+## Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-> Flutter SDK (version 3.16.8)
+-> Dart SDK (version 2.12 or later)
+-> Any Flutter Supported IDE
